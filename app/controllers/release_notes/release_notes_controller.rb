@@ -5,8 +5,9 @@ module ReleaseNotes
     layout ReleaseNotes.layout_name
 
     class SemanticHtmlRenderer < Redcarpet::Render::HTML
-      def header(text, header_level)
-        "<a name='#{text.parameterize}'></a><h#{header_level+1} class='h#{header_level+2}'>#{text}</h#{header_level+1}>"
+      def header(text, header_level,anchor=nil)
+        anchor ||= text.parameterize
+        "<a name='#{anchor}'></a><h#{header_level+1} class='h#{header_level+2}'>#{text}</h#{header_level+1}>"
       end
     end
 
