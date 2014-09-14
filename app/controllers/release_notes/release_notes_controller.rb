@@ -2,10 +2,21 @@ require 'redcarpet'
 
 module ReleaseNotes
   class ReleaseNotesController < ReleaseNotes::ApplicationController
+    layout ReleaseNotes.layout_name
+
+    class SemanticHtmlRenderer < Redcarpet::Render::HTML
+      def header(text, header_level)
+        "<a name='#{text.parameterize}'></a><h#{header_level+1} class='h#{header_level+2}'>#{text}</h#{header_level+1}>"
+      end
+    end
 
     def index
       file_content = File.read("#{Rails.root}/RELEASE_NOTES.md")
-      markdown_renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, space_after_headers: true, fenced_code_blocks: true)
+      markdown_renderer = Redcarpet::Markdown.new(SemanticHtmlRenderer.new,
+                                                  autolink: true, 
+                                                  no_intra_emphasis: true,
+                                                  space_after_headers: true, 
+                                                  fenced_code_blocks: true)
       @content = markdown_renderer.render(file_content)
     end
 
