@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     release_notes (0.0.1)
-      rails (~> 4.1.6)
+      rails (~> 4.0)
       redcarpet
 
 GEM
