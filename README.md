@@ -58,12 +58,35 @@ Then set this up in `config/initializers/release_notes.rb`:
 ReleaseNotes.layout_name = 'release_notes'
 ```
 
+### HTML
+
+By default, each top-level header is rendered as an `<h2>`, second level as an `<h3>` and so on.  This is because the page title
+is at an `<h1>`, so this strategy is more semantically correct.  Further, each header is given a class that is `h` followed by
+the number _one greater_ than the `h` tag's level (so, _two_ greater than what Markdown dictates the header level to be):
+
+```html
+<h2 class="h3">July 4, 2014</h2>
+<p>
+We released some stuff
+</p>
+```
+
+You can control this in `config/initializers/release_notes.rb` in your app:
+
+```ruby
+ReleaseNotes.renderer_options = {
+  header_level_offset: 0,           # h1's are h1
+  header_class_prefix: "f",         # with a class fX
+  header_class_prefix_offset: 0,    # where X is the header, e.g. <h1 class="f1">Title</h1>
+}
+```
+
 ### CSS
 
 This engine provides no CSS or other look and feel.  By using a layout in your application, your styles will be used.  You can
 further customize the release notes by taking advantage of the generated HTML.
 
 * Everything is wrapped in a `<section class='release-notes'>...</section>`
-* The title "Release Notes" is the only `<h1>` rendered
-* Markdown titles are rendered  as "plus 1", meaning headers that would normally be an `<h1>` are rendered as `<h2>` and so on.
+* The title "Release Notes" is the only `<h1>` rendered (in the default configuration)
+* In the default configuration, Markdown titles are rendered  as "plus 1", meaning headers that would normally be an `<h1>` are rendered as `<h2>` and so on.
 * Each `<h2>` (which corresponds to major sections in your `RELEASE_NOTES.md` file) gets an anchor for deep linking.
