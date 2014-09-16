@@ -8,7 +8,7 @@ module ReleaseNotes
 
     def index
       file_content = File.read("#{Rails.root}/RELEASE_NOTES.md")
-      markdown_renderer = Redcarpet::Markdown.new(SemanticHtmlRenderer.new(ReleaseNotes.renderer_options),
+      markdown_renderer = Redcarpet::Markdown.new(ReleaseNotes::SemanticHtmlRenderer.new(ReleaseNotes.renderer_options),
                                                   autolink: true, 
                                                   no_intra_emphasis: true,
                                                   space_after_headers: true, 
