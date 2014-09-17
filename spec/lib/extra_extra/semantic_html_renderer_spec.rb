@@ -1,7 +1,7 @@
 require 'spec_helper'
-require 'release_notes/semantic_html_renderer'
+require 'extra_extra/semantic_html_renderer'
 
-describe ReleaseNotes::SemanticHtmlRenderer do
+describe ExtraExtra::SemanticHtmlRenderer do
   let(:options) { {} }
   let(:text)    { "hello there!" }
   let(:anchor)  { "bloergh" }

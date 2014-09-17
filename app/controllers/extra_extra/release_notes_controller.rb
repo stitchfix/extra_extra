@@ -1,14 +1,14 @@
 require 'redcarpet'
-require 'release_notes/semantic_html_renderer'
+require 'extra_extra/semantic_html_renderer'
 
-module ReleaseNotes
-  class ReleaseNotesController < ReleaseNotes::ApplicationController
-    layout ReleaseNotes.layout_name
+module ExtraExtra
+  class ReleaseNotesController < ExtraExtra::ApplicationController
+    layout ExtraExtra.layout_name
 
 
     def index
       file_content = File.read("#{Rails.root}/RELEASE_NOTES.md")
-      markdown_renderer = Redcarpet::Markdown.new(ReleaseNotes::SemanticHtmlRenderer.new(ReleaseNotes.renderer_options),
+      markdown_renderer = Redcarpet::Markdown.new(ExtraExtra::SemanticHtmlRenderer.new(ExtraExtra.renderer_options),
                                                   autolink: true, 
                                                   no_intra_emphasis: true,
                                                   space_after_headers: true, 
