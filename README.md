@@ -1,21 +1,23 @@
-# release_notes - Include a release notes page in your app
+# extra_extra - Let your users read all about how awesome your app is!
 
 Release Notes are useful for internal applications where users might like a list of what changed when.  This is a Rails Engine
 that allows you to manage a file `RELEASE_NOTES.md` at the root of your app and have it served-up as `/release_notes` to your
 app's users.
+
+![EXTRA EXTRA](extra_extra.png)
 
 ## Install
 
 In your `Gemfile`:
 
 ```ruby
-gem 'release_notes'
+gem 'extra_extra'
 ```
 
 After a `bundle install`, set it up in `config/routes.rb`:
 
 ```ruby
-mount ReleaseNotes::Engine, at: "/release_notes"
+mount ExtraExtra::Engine, at: "/release_notes"
 ```
 
 Finally, create a `RELEASE_NOTES.md` file at the root of your app's directory:
@@ -52,10 +54,10 @@ Create `app/views/layouts/release_notes.html.erb`:
 </html>
 ```
 
-Then set this up in `config/initializers/release_notes.rb`:
+Then set this up in `config/initializers/extra_extra.rb`:
 
 ```ruby
-ReleaseNotes.layout_name = 'release_notes'
+ExtraExtra.layout_name = 'release_notes'
 ```
 
 ### HTML
@@ -71,10 +73,10 @@ We released some stuff
 </p>
 ```
 
-You can control this in `config/initializers/release_notes.rb` in your app:
+You can control this in `config/initializers/extra_extra.rb` in your app:
 
 ```ruby
-ReleaseNotes.renderer_options = {
+ExtraExtra.renderer_options = {
   header_level_offset: 0,           # h1's are h1
   header_class_prefix: "f",         # with a class fX
   header_class_prefix_offset: 0,    # where X is the header, e.g. <h1 class="f1">Title</h1>

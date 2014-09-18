@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe ReleaseNotes::ReleaseNotesController do
+describe ExtraExtra::ReleaseNotesController do
 
-  routes { ReleaseNotes::Engine.routes }
+  routes { ExtraExtra::Engine.routes }
 
   render_views
 

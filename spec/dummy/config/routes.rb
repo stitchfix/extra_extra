@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount ReleaseNotes::Engine => "/release_notes"
+  mount ExtraExtra::Engine => "/release_notes"
 end

@@ -1,5 +1,5 @@
 require 'redcarpet'
-module ReleaseNotes
+module ExtraExtra
   class SemanticHtmlRenderer < Redcarpet::Render::HTML
     def initialize(opts={})
       @header_level_offset = opts.delete(:header_level_offset) || 1
