@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Stitch Fix Engineering"]
   s.email       = ["eng@stitchfix.com"]
   s.homepage    = "http://tech.stitchfix.com"
-  s.summary     = "Provides a simple way to include and manage release notes for internal applications"
-  s.description = "Provides a simple way to include and manage release notes for internal applications"
+  s.summary     = "Let your users read all about how awesome your app is!"
+  s.description = "Provides a simple way to include and manage release notes for internal applications by writing a markdown file"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
