@@ -1,8 +1,9 @@
 # extra_extra - Let your users read all about how awesome your app is!
 
-Release Notes are useful for internal applications where users might like a list of what changed when.  This is a Rails Engine
-that allows you to manage a file `RELEASE_NOTES.md` at the root of your app and have it served-up as `/release_notes` to your
-app's users.
+[![Build Status](https://travis-ci.org/stitchfix/extra_extra.svg?branch=master)](https://travis-ci.org/stitchfix/extra_extra)
+
+Release Notes are useful for internal applications where users might like a list of what changed when.
+This is a Rails Engine that allows you to manage a file `RELEASE_NOTES.md` at the root of your app and have it served-up as `/release_notes` to your app's users.
 
 ![EXTRA EXTRA](extra_extra.png)
 
