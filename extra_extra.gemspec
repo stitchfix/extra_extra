@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.name        = "extra_extra"
   s.version     = ExtraExtra::VERSION
   s.authors     = ["Stitch Fix Engineering"]
-  s.email       = ["eng@stitchfix.com"]
+  s.email       = ["opensource@stitchfix.com"]
   s.homepage    = "http://tech.stitchfix.com"
   s.summary     = "Let your users read all about how awesome your app is!"
   s.description = "Provides a simple way to include and manage release notes for internal applications by writing a markdown file"
