@@ -1,9 +1,9 @@
 PATH
   remote: .
   specs:
-    extra_extra (1.0.3)
+    extra_extra (1.0.4)
       rails (~> 4)
-      redcarpet
+      redcarpet (>= 3.3.2)
 
 GEM
   remote: https://rubygems.org/

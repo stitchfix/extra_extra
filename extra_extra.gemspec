@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir["spec/**/*"]
 
   s.add_runtime_dependency "rails", "~> 4"
-  s.add_runtime_dependency "redcarpet"
+  s.add_runtime_dependency "redcarpet", ">= 3.3.2"
   s.add_development_dependency "sqlite3"
   s.add_development_dependency 'rspec-rails'
 end
