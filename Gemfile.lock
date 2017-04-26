@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     extra_extra (1.0.4)
-      rails
+      rails (~> 5)
       redcarpet (>= 3.3.2)
 
 GEM
