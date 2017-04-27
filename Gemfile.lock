@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    extra_extra (1.0.4)
+    extra_extra (1.1.0)
       rails (~> 5, >= 4)
       redcarpet (>= 3.3.2)
 
