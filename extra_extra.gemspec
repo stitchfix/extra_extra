@@ -21,4 +21,5 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "redcarpet", ">= 3.3.2"
   s.add_development_dependency "sqlite3"
   s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency('rspec_junit_formatter')
 end
