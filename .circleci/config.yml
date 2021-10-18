@@ -11,7 +11,7 @@ jobs:
         password: "$DOCKERHUB_PASSWORD"
     steps:
     - checkout
-    - run: apt-get install sqlite3
+    - run: apt-get install libsqlite3-dev
     - run: bundle config stitchfix01.jfrog.io $ARTIFACTORY_USER:$ARTIFACTORY_TOKEN
     - run: bundle install --full-index
     - run:
