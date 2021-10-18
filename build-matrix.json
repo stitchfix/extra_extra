@@ -1,4 +1,7 @@
 {
   "build_matrix": {
+    "packages": [
+      "libsqlite3-dev"
+    ]
   }
 }
